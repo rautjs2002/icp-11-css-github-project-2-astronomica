@@ -1,0 +1,75 @@
+.home-img-container {
+  overflow: hidden;
+}
+
+.home-img {
+  width: 100%;
+  position: relative;
+}
+
+.home-img:hover {
+  transition: 10s;
+  transform: scale(1.5);
+}
+
+.home-description {
+  position: absolute;
+  top: 150px;
+  right: 100px;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 45%;
+}
+
+.home-description h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.mars-container {
+  background-color: #110515;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.mars-video-container {
+  width: 60%;
+}
+
+.mars-video-container iframe {
+  width: 100%;
+  /* height: auto; */
+  aspect-ratio: 16/9;
+}
+
+.mars-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  align-items: start;
+  color: #c1e8ff;
+}
+
+.mars-content h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 992px) {
+  .mars-container {
+    flex-direction: column-reverse;
+  }
+
+  .mars-video-container {
+    width: 100%;
+  }
+
+  .mars-content {
+    width: 100%;
+  }
+}

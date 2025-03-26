@@ -12,28 +12,34 @@
 }
 
 .nav-container {
+  position: sticky;
+  top: 0;
   background-color: #110515;
   padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 6px 1px #c1e8ff;
+  box-shadow: 0 0 10px 0 #b26fcb;
+  z-index: 100;
 }
 
 .brand-container {
+  width: 260px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 .brand-logo {
-  margin-right: 20px;
   width: 60px;
 }
 
 .brand-name {
-  color: #b26fcb;
+  color: #c1e8ff;
+  text-shadow: 1px 1px 0px #ff3300;
+  font-size: 24px;
 }
 
 .nav-links-container {
@@ -51,11 +57,188 @@
   font-weight: bold;
 }
 
-
-
+.nav-links:hover {
+  color: #b26fcb;
+}
+.nav-link-selected {
+  border-bottom: 4px double #c1e8ff;
+}
 
 #menu {
+  font-size: 25px;
+}
+
+.btn {
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn:hover {
+  top: 2px;
+}
+
+.btn-primary {
+  background-color: #ed5731;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #be3f1f;
+}
+
+.btn-secondary {
+  background-color: #c1e8ff;
+  color: #110515;
+  border: 2px solid #110515;
+}
+
+.btn-disable {
+  background-color: #e7eff3;
+  color: rgb(126, 124, 124);
+  border: none;
+}
+
+.btn-small {
+  font-size: 16px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-small:hover {
+  top: 2px;
+}
+
+.btn-large {
+  font-size: 24px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin: 0 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-large:hover {
+  top: 2px;
+}
+
+.footer-container {
+  margin-top: 100px;
+  padding: 10px;
+  background-color: #110515;
+  color: #c1e8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-brand-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-brand-name-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 270px;
+  align-items: center;
+}
+
+.brand-description {
+  padding: 5px;
+  text-align: center;
+}
+
+.footer-heading {
+  font-size: 24px;
+  border-bottom: 1px solid #b26fcb;
+  text-align: center;
+  padding-bottom: 3px;
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.media-icons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.media-icon {
   font-size: 30px;
+  border: 2px solid #c1e8ff;
+  padding: 10px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.quick-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quick-links-container a {
+  text-decoration: none;
+  color: #c1e8ff;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 250px;
+}
+
+.conatct-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.conatct-content a {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #c1e8ff;
+}
+
+.copyright {
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -65,13 +248,38 @@
 }
 
 @media (min-width: 769px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
   .menu-container {
     display: none;
   }
 }
 
 @media (max-width: 992px) {
-  .nav-container {
-    flex-wrap: wrap;
+  .footer-content {
+    gap: 30px;
+  }
+}
+
+@media (min-width: 993px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .footer-brand-container {
+    width: 370px;
+    align-items: start;
+  }
+
+  .brand-description {
+    text-align: start;
+  }
+
+  .contact-container {
+    align-items: start;
   }
 }
